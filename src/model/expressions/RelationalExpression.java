@@ -1,6 +1,8 @@
 package model.expressions;
 
 import exceptions.ExpressionException;
+import model.types.BooleanType;
+import model.types.IType;
 import model.types.IntegerType;
 import model.utils.IDictionary;
 import model.values.BooleanValue;
@@ -41,6 +43,20 @@ public class RelationalExpression implements IExpression {
             case ">=" -> new BooleanValue(first >= second);
             default -> throw new ExpressionException(operator + " is an invalid operator!");
         };
+    }
+
+    @Override
+    public IType typeCheck(IDictionary<String, IType> typeEnvironment) throws Exception {
+        IType firstType = firstExpression.typeCheck(typeEnvironment);
+        IType secondType = secondExpression.typeCheck(typeEnvironment);
+        if (!firstType.equals(new IntegerType())) {
+            throw new ExpressionException("first operand  " + firstExpression + " is not of integer type!");
+        }
+        if (!secondType.equals(new IntegerType())) {
+            throw new ExpressionException("second operand  " + secondExpression + " is not of integer type!");
+        }
+
+        return new BooleanType();
     }
 
     @Override

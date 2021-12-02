@@ -49,6 +49,18 @@ public class HeapAllocationStatement implements IStatement {
     }
 
     @Override
+    public IDictionary<String, IType> typeCheck(IDictionary<String, IType> typeEnvironment) throws Exception {
+        IType nameType = typeEnvironment.getValue(name);
+        IType expressionType = expression.typeCheck(typeEnvironment);
+
+        if (!nameType.equals(new ReferenceType(expressionType))) {
+            throw new StatementException("the type of expression " + expression + " does not match the type of the variable " + name);
+        }
+
+        return typeEnvironment;
+    }
+
+    @Override
     public String toString() {
         return "new(" + name + ", " + expression.toString() + ");";
     }

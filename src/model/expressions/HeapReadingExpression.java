@@ -1,6 +1,8 @@
 package model.expressions;
 
 import exceptions.ExpressionException;
+import model.types.IType;
+import model.types.ReferenceType;
 import model.utils.IDictionary;
 import model.values.IValue;
 import model.values.ReferenceValue;
@@ -21,6 +23,16 @@ public class HeapReadingExpression implements IExpression {
             throw new ExpressionException("address " + heapAddress + " is invalid!");
         }
         return heapTable.getValue(heapAddress);
+    }
+
+    @Override
+    public IType typeCheck(IDictionary<String, IType> typeEnvironment) throws Exception {
+        IType type = expression.typeCheck(typeEnvironment);
+        if (!(type instanceof ReferenceType)) {
+            throw new ExpressionException("expression " + expression + " is not of reference type!");
+        }
+
+        return ((ReferenceType) type).getInner();
     }
 
     @Override

@@ -1,6 +1,7 @@
 package model.expressions;
 
 import exceptions.ExpressionException;
+import model.types.IType;
 import model.utils.IDictionary;
 import model.values.IValue;
 
@@ -18,6 +19,11 @@ public class VariableNameExpression implements IExpression {
         }
 
         return symbolsTable.getValue(name);
+    }
+
+    @Override
+    public IType typeCheck(IDictionary<String, IType> typeEnvironment) throws Exception {
+        return typeEnvironment.getValue(name);
     }
 
     @Override

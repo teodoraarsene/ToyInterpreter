@@ -3,6 +3,8 @@ package model.statements;
 import exceptions.StatementException;
 import model.ProgramState;
 import model.expressions.IExpression;
+import model.types.BooleanType;
+import model.types.IType;
 import model.utils.IDictionary;
 import model.utils.IStack;
 import model.values.BooleanValue;
@@ -33,6 +35,16 @@ public class WhileStatement implements IStatement {
             executionStack.push(statement);
         }
         return null;
+    }
+
+    @Override
+    public IDictionary<String, IType> typeCheck(IDictionary<String, IType> typeEnvironment) throws Exception {
+        if (!expression.typeCheck(typeEnvironment).equals(new BooleanType())) {
+            throw new StatementException("expression \" + expression + \" is not of boolean type!");
+        }
+
+        statement.typeCheck(typeEnvironment.clone());
+        return typeEnvironment;
     }
 
     @Override

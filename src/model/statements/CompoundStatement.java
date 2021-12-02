@@ -1,6 +1,8 @@
 package model.statements;
 
 import model.ProgramState;
+import model.types.IType;
+import model.utils.IDictionary;
 import model.utils.IStack;
 
 public class CompoundStatement implements IStatement {
@@ -21,6 +23,12 @@ public class CompoundStatement implements IStatement {
 
         return null;
     }
+
+    @Override
+    public IDictionary<String, IType> typeCheck(IDictionary<String, IType> typeEnvironment) throws Exception {
+        return secondStatement.typeCheck(firstStatement.typeCheck(typeEnvironment));
+    }
+
     @Override
     public String toString() {
         return "(" + firstStatement.toString() + " " + secondStatement.toString() + ")";

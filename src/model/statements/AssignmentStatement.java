@@ -37,6 +37,17 @@ public class AssignmentStatement implements IStatement {
     }
 
     @Override
+    public IDictionary<String, IType> typeCheck(IDictionary<String, IType> typeEnvironment) throws Exception {
+        IType nameType = typeEnvironment.getValue(name);
+        IType expressionType = expression.typeCheck(typeEnvironment);
+        if (!nameType.equals(expressionType)) {
+            throw new StatementException("the type of the expression " + expression + " does not match the type of the variable " + name + "!");
+        }
+
+        return typeEnvironment;
+    }
+
+    @Override
     public String toString() {
         return name + " = " + expression.toString() + ";";
     }

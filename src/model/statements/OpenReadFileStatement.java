@@ -3,6 +3,7 @@ package model.statements;
 import exceptions.StatementException;
 import model.ProgramState;
 import model.expressions.IExpression;
+import model.types.IType;
 import model.types.StringType;
 import model.utils.IDictionary;
 import model.values.IValue;
@@ -27,7 +28,7 @@ public class OpenReadFileStatement implements IStatement {
 
         IValue expressionValue = expression.evaluate(symbolsTable, heapTable);
         if (!expressionValue.getType().equals(new StringType())) {
-            throw new StatementException("expression " + expression + " did not evaluate to string type!");
+            throw new StatementException("expression " + expression + " does not evaluate to string type!");
         }
 
         StringValue stringValue = (StringValue) expressionValue;
@@ -44,6 +45,15 @@ public class OpenReadFileStatement implements IStatement {
         }
 
         return null;
+    }
+
+    @Override
+    public IDictionary<String, IType> typeCheck(IDictionary<String, IType> typeEnvironment) throws Exception {
+        if (!expression.typeCheck(typeEnvironment).equals(new StringType())) {
+            throw new StatementException("expression " + expression + " does not evaluate to string type!");
+        }
+
+        return typeEnvironment;
     }
 
     @Override

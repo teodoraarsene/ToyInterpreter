@@ -2,6 +2,7 @@ package model.statements;
 
 import model.ProgramState;
 import model.expressions.IExpression;
+import model.types.IType;
 import model.utils.IDictionary;
 import model.utils.IList;
 import model.values.IValue;
@@ -22,6 +23,12 @@ public class PrintStatement implements IStatement {
         output.add(expression.evaluate(symbolsTable, heapTable));
 
         return null;
+    }
+
+    @Override
+    public IDictionary<String, IType> typeCheck(IDictionary<String, IType> typeEnvironment) throws Exception {
+        expression.typeCheck(typeEnvironment);
+        return typeEnvironment;
     }
 
     @Override

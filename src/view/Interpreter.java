@@ -5,12 +5,10 @@ import model.ProgramState;
 import model.expressions.*;
 import model.statements.*;
 import model.types.BooleanType;
+import model.types.IType;
 import model.types.IntegerType;
 import model.types.ReferenceType;
-import model.utils.MyDictionary;
-import model.utils.MyHeap;
-import model.utils.MyList;
-import model.utils.MyStack;
+import model.utils.*;
 import model.values.BooleanValue;
 import model.values.IntegerValue;
 import model.values.StringValue;
@@ -36,7 +34,14 @@ public class Interpreter {
     }
 
     private static ProgramState initializeDataStructures(IStatement example) {
-        return new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), example);
+        IDictionary<String, IType> typeEnvironment = new MyDictionary<>();
+        try{
+            example.typeCheck(typeEnvironment);
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+       return new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), example);
     }
 
 
