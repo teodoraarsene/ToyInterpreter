@@ -35,7 +35,7 @@ public class Interpreter {
 
     private static ProgramState initializeDataStructures(IStatement example) {
         IDictionary<String, IType> typeEnvironment = new MyDictionary<>();
-        try{
+        try {
             example.typeCheck(typeEnvironment);
         }
         catch (Exception e) {
@@ -272,6 +272,18 @@ public class Interpreter {
         Controller controller11 = new Controller(repo11);
         controller11.addProgramState(state11);
         menu.addCommand(new RunExampleCommand("11", ex11.toString(), controller11));
+
+        // int v; v=err; print(v);
+        IStatement ex12 = buildStatement(
+                new VariableDeclarationStatement("v", new IntegerType()),
+                new AssignmentStatement("v", new ValueExpression(new StringValue("err"))),
+                new PrintStatement(new VariableNameExpression("v"))
+        );
+        ProgramState state12 = initializeDataStructures(ex12);
+        IRepository repo12 = new Repository("src/logFiles/log12.txt");
+        Controller controller12 = new Controller(repo12);
+        controller12.addProgramState(state12);
+        menu.addCommand(new RunExampleCommand("12", ex12.toString(), controller12));
 
         menu.show();
     }
