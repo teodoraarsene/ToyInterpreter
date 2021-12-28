@@ -1,4 +1,4 @@
-package view;
+package view.cli;
 
 import controller.Controller;
 import model.ProgramState;
@@ -33,19 +33,14 @@ public class Interpreter {
         return finalStatement;
     }
 
-    private static ProgramState initializeDataStructures(IStatement example) {
+    private static ProgramState initializeDataStructures(IStatement example) throws Exception {
         IDictionary<String, IType> typeEnvironment = new MyDictionary<>();
-        try {
-            example.typeCheck(typeEnvironment);
-        }
-        catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        example.typeCheck(typeEnvironment);
        return new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), example);
     }
 
-
     public static void main(String[] args) {
+        try{
         TextMenu menu = new TextMenu();
         menu.addCommand(new ExitCommand("0", "exit"));
 
@@ -274,17 +269,23 @@ public class Interpreter {
         menu.addCommand(new RunExampleCommand("11", ex11.toString(), controller11));
 
         // int v; v=err; print(v);
-        IStatement ex12 = buildStatement(
-                new VariableDeclarationStatement("v", new IntegerType()),
-                new AssignmentStatement("v", new ValueExpression(new StringValue("err"))),
-                new PrintStatement(new VariableNameExpression("v"))
-        );
-        ProgramState state12 = initializeDataStructures(ex12);
-        IRepository repo12 = new Repository("src/logFiles/log12.txt");
-        Controller controller12 = new Controller(repo12);
-        controller12.addProgramState(state12);
-        menu.addCommand(new RunExampleCommand("12", ex12.toString(), controller12));
+//        IStatement ex12 = buildStatement(
+//                new VariableDeclarationStatement("v", new IntegerType()),
+//                new AssignmentStatement("v", new ValueExpression(new StringValue("err"))),
+//                new PrintStatement(new VariableNameExpression("v"))
+//        );
+//        ProgramState state12 = initializeDataStructures(ex12);
+//        IRepository repo12 = new Repository("src/logFiles/log12.txt");
+//        Controller controller12 = new Controller(repo12);
+//        controller12.addProgramState(state12);
+//        menu.addCommand(new RunExampleCommand("12", ex12.toString(), controller12));
 
         menu.show();
-    }
+
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        }
 }

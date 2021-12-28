@@ -16,6 +16,15 @@ public class MyList<TElem> implements IList<TElem> {
     }
 
     @Override
+    public ArrayList<String> getList() {
+        ArrayList<String> listString = new ArrayList<>();
+        for (TElem elem : list) {
+            listString.add(elem.toString());
+        }
+        return listString;
+    }
+
+    @Override
     public String toString() {
         StringBuilder representation = new StringBuilder();
         for(TElem elem : list) {

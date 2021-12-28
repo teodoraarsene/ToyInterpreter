@@ -1,4 +1,4 @@
-package view;
+package view.cli;
 
 import view.commands.Command;
 

@@ -1,0 +1,559 @@
+THREAD ID: 11
+EXECUTION STACK:
+((((((int v; reference(int) a;) v = 10;) new(a, 22);) fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));) print(v);) print(*(a));)
+SYMBOLS' TABLE:
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+(((((int v; reference(int) a;) v = 10;) new(a, 22);) fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));) print(v);)print(*(a));
+SYMBOLS' TABLE:
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+(((((int v; reference(int) a;) v = 10;) new(a, 22);) fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));) print(v);)print(*(a));
+SYMBOLS' TABLE:
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+((((int v; reference(int) a;) v = 10;) new(a, 22);) fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));)print(v);print(*(a));
+SYMBOLS' TABLE:
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+((((int v; reference(int) a;) v = 10;) new(a, 22);) fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));)print(v);print(*(a));
+SYMBOLS' TABLE:
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+(((int v; reference(int) a;) v = 10;) new(a, 22);)fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));print(v);print(*(a));
+SYMBOLS' TABLE:
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+(((int v; reference(int) a;) v = 10;) new(a, 22);)fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));print(v);print(*(a));
+SYMBOLS' TABLE:
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+((int v; reference(int) a;) v = 10;)new(a, 22);fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));print(v);print(*(a));
+SYMBOLS' TABLE:
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+((int v; reference(int) a;) v = 10;)new(a, 22);fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));print(v);print(*(a));
+SYMBOLS' TABLE:
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+(int v; reference(int) a;)v = 10;new(a, 22);fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));print(v);print(*(a));
+SYMBOLS' TABLE:
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+(int v; reference(int) a;)v = 10;new(a, 22);fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));print(v);print(*(a));
+SYMBOLS' TABLE:
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+int v;reference(int) a;v = 10;new(a, 22);fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));print(v);print(*(a));
+SYMBOLS' TABLE:
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+int v;reference(int) a;v = 10;new(a, 22);fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));print(v);print(*(a));
+SYMBOLS' TABLE:
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+reference(int) a;v = 10;new(a, 22);fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));print(v);print(*(a));
+SYMBOLS' TABLE:
+v -> 0
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+reference(int) a;v = 10;new(a, 22);fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));print(v);print(*(a));
+SYMBOLS' TABLE:
+v -> 0
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+v = 10;new(a, 22);fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));print(v);print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{0 -> int}
+v -> 0
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+v = 10;new(a, 22);fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));print(v);print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{0 -> int}
+v -> 0
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+new(a, 22);fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));print(v);print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{0 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+new(a, 22);fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));print(v);print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{0 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));print(v);print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 22
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+fork((((*(a) = 30; v = 32;) print(v);) print(*(a));));print(v);print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 22
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+print(v);print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 22
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 13
+EXECUTION STACK:
+(((*(a) = 30; v = 32;) print(v);) print(*(a));)
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 22
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+print(v);print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 22
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 13
+EXECUTION STACK:
+(((*(a) = 30; v = 32;) print(v);) print(*(a));)
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 22
+
+OUTPUT:
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 22
+
+OUTPUT:
+10
+-------------------------------------------------------------------------
+THREAD ID: 13
+EXECUTION STACK:
+((*(a) = 30; v = 32;) print(v);)print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 22
+
+OUTPUT:
+10
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 22
+
+OUTPUT:
+10
+-------------------------------------------------------------------------
+THREAD ID: 13
+EXECUTION STACK:
+((*(a) = 30; v = 32;) print(v);)print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 22
+
+OUTPUT:
+10
+-------------------------------------------------------------------------
+THREAD ID: 11
+EXECUTION STACK:
+
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 22
+
+OUTPUT:
+10
+22
+-------------------------------------------------------------------------
+THREAD ID: 13
+EXECUTION STACK:
+(*(a) = 30; v = 32;)print(v);print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 22
+
+OUTPUT:
+10
+22
+-------------------------------------------------------------------------
+THREAD ID: 13
+EXECUTION STACK:
+(*(a) = 30; v = 32;)print(v);print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 22
+
+OUTPUT:
+10
+22
+-------------------------------------------------------------------------
+THREAD ID: 13
+EXECUTION STACK:
+*(a) = 30;v = 32;print(v);print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 22
+
+OUTPUT:
+10
+22
+-------------------------------------------------------------------------
+THREAD ID: 13
+EXECUTION STACK:
+*(a) = 30;v = 32;print(v);print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 22
+
+OUTPUT:
+10
+22
+-------------------------------------------------------------------------
+THREAD ID: 13
+EXECUTION STACK:
+v = 32;print(v);print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 30
+
+OUTPUT:
+10
+22
+-------------------------------------------------------------------------
+THREAD ID: 13
+EXECUTION STACK:
+v = 32;print(v);print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 10
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 30
+
+OUTPUT:
+10
+22
+-------------------------------------------------------------------------
+THREAD ID: 13
+EXECUTION STACK:
+print(v);print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 32
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 30
+
+OUTPUT:
+10
+22
+-------------------------------------------------------------------------
+THREAD ID: 13
+EXECUTION STACK:
+print(v);print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 32
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 30
+
+OUTPUT:
+10
+22
+-------------------------------------------------------------------------
+THREAD ID: 13
+EXECUTION STACK:
+print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 32
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 30
+
+OUTPUT:
+10
+22
+32
+-------------------------------------------------------------------------
+THREAD ID: 13
+EXECUTION STACK:
+print(*(a));
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 32
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 30
+
+OUTPUT:
+10
+22
+32
+-------------------------------------------------------------------------
+THREAD ID: 13
+EXECUTION STACK:
+
+SYMBOLS' TABLE:
+a -> reference_value{1 -> int}
+v -> 32
+
+FILE TABLE:
+
+HEAP TABLE:
+1 -> 30
+
+OUTPUT:
+10
+22
+32
+30
+-------------------------------------------------------------------------

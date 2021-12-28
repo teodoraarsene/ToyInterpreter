@@ -31,6 +31,11 @@ public class MyStack<TElem> implements IStack<TElem> {
     }
 
     @Override
+    public Deque<TElem> getStack() {
+        return stack;
+    }
+
+    @Override
     public String toString() {
         StringBuilder representation = new StringBuilder();
         for (TElem crtElem : this.stack) {

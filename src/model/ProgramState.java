@@ -1,9 +1,7 @@
 package model;
 
 import model.statements.IStatement;
-import model.utils.IDictionary;
-import model.utils.IList;
-import model.utils.IStack;
+import model.utils.*;
 import model.values.IValue;
 
 import java.io.BufferedReader;
@@ -26,6 +24,16 @@ public class ProgramState {
         this.heapTable = heapTable;
         executionStack.push(program);
         this.id = manageId();
+    }
+
+    public ProgramState(IStatement program) {
+        executionStack = new MyStack<>();
+        symbolsTable = new MyDictionary<>();
+        output = new MyList<>();
+        fileTable = new MyDictionary<>();
+        heapTable = new MyDictionary<>();
+        executionStack.push(program);
+        id = manageId();
     }
 
     public IStack<IStatement> getExecutionStack() {
